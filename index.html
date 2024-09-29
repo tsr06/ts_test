@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .header {
+      display: flex;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 4%;
+      justify-content: space-between;
+    }
+    .a {
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      height: 200%;
+      animation: fadeInBackground 6s ease-in-out;
+    }
+    .b {
+      display: flex;
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-top: 30px;
+      list-style: none;
+    }
+    .b li {
+      margin-left: 30px;
+      background-color: rgba(218, 92, 235, 1); /* 白い背景を追加 */
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .b li a {
+      text-transform: none;
+      color: #1a1a1a;
+      text-decoration: none;
+    }
+    .c {
+      text-align: center;
+      justify-content: center;
+    }
+    .c p {
+      font-size: 16px;
+      margin: 10px 0 42px;
+    }
+    .d {
+      font-size: 32px;
+      font-weight: normal;
+      background-color: rgba(255, 255, 255, 0.8); /* 白い背景を追加 */
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    .button {
+      font-size: 18px;
+      background-color: #ff838b;
+      color: #fff;
+      border-radius: 5px;
+      padding: 18px 32px;
+      text-decoration: none;
+    }
+    #home {
+      background-image: url('images/ポスター修正後.jpg');
+      background-color: #f6f5f4;
+      min-height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+    #home .d {
+      text-transform: none;
+    }
+    .e {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+    .p{
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    .center-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 200vh;
+    }
+    @keyframes fadeInBackground {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+  </style>
+</head>
+<body>
+  <div id="home" class="a">
+    <header class="header">
+      <div t-logo>
+        <h1><a><img class="logo" src="images/ポスター修正後.jpg" alt="多摩未来祭ロゴ"></a></h1>
+      </div>
+      <nav>
+        <ul class="b">
+          <li><a href="about\schedule.html">日程</a></li>
+          <li><a href="about\access.html">アクセス</a></li>
+          <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=07VbxZj7okm9Yto1xwcA4mRQxAdpmR1AjKxVxvrD3FJURUlKN0U3TExUWk83MVRaTlg4NFVFRUFSRS4u">入場用ＱＲコード</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="center-content">
+      <div class="c">
+        <h2 class="d">第n回多摩未来祭</h2>
+        <p class="p">welcome</p>
+        <a class="button" href="about\main.html">クリックしてください</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
