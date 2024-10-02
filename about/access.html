@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
- <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0"><!--デバイスの幅に合わせる-->
-      <style>
-        h1 {
-            position: relative;
-            color: #333;
-            text-shadow: 0 0 2px white;
-        }
-        h1:before {
-            content: "";
-            position: absolute;
-            background: #9de5ff;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            top: 50%;
-            left: -15px;
-            transform: translateY(-50%);
-            z-index: -1;
-        }
-         dekasugi {
-          width: 100%;
-          height: auto;
-        }
-    </style>
+  <style>
+    h1 {
+      position: relative;
+      color: #333;
+      text-shadow: 0 0 2px white;
+    }
+    h1:before {
+      content: "";
+      position: absolute;
+      background: #9de5ff;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      top: 50%;
+      left: -15px;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+    .dekasugi {
+      width: 100%;
+      height: auto;
+    }
+  </style>
   <title>多摩科学技術高校アクセスマップ</title>
- </head>
- <body>
-  <p><h1>多摩科学技術高校アクセスマップ</h1></p>
- <img src="多摩科技アクセス.png">
- <h2>■多摩科学技術高校周辺地図</h2>
-  <div class="dekasugi">
- <img src="多摩科技周辺地図.png">
-  </div>
- </body>
+</head>
+<body>
+  <h1>多摩科学技術高校アクセスマップ</h1>
+  <img src="多摩科技アクセス.png">
+  <h2>■多摩科学技術高校周辺地図</h2>
+  <img src="多摩科技周辺地図.png" class="dekasugi">
+</body>
 </html>
+
