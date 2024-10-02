@@ -3,114 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="textbox.css">
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-    }
-    .background-container {
+    h1 {
       position: relative;
-      width: 100%;
-      height: 100%;
+      color: #333;
+      text-shadow: 0 0 2px white;
     }
-    .background-image {
+    h1:before {
+      content: "";
       position: absolute;
+      background: #9de5ff;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      top: 50%;
+      left: -15px;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+    .fixed-title {
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      object-fit: cover; /* ここで比率を保ちながら拡大縮小 */
-      z-index: -1;
+      background-color: #fff;
+      z-index: 1000;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-sizing: border-box;
     }
-    .header {
-      display: flex;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 4%;
-      justify-content: space-between;
-      position: relative;
-      z-index: 1;
+    body {
+      margin: 0;
     }
-    .b {
-      display: flex;
-      font-size: 18px;
-      text-transform: uppercase;
-      margin-top: 30px;
-      list-style: none;
+    .content {
+      margin-top: 150px;
+      padding: 10px;
     }
-    .b li {
-      margin-left: 30px;
-      background-color: rgba(218, 92, 235, 1); /* 白い背景を追加 */
-      padding: 5px 10px;
-      border-radius: 5px;
-    }
-    .b li a {
-      text-transform: none;
-      color: #1a1a1a;
-      text-decoration: none;
-    }
-    .c {
-      text-align: center;
-      justify-content: center;
-      position: relative;
-      z-index: 1;
-    }
-    .c p {
-      font-size: 16px;
-      margin: 10px 0 42px;
-    }
-    .d {
-      font-size: 32px;
-      font-weight: normal;
-      background-color: rgba(255, 255, 255, 0.8); /* 白い背景を追加 */
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 5px;
-    }
-    .button {
-      font-size: 18px;
-      background-color: #ff838b;
-      color: #fff;
-      border-radius: 5px;
-      padding: 18px 32px;
-      text-decoration: none;
-    }
-    .center-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      position: relative;
-      z-index: 1;
-    }
+    .box26 {
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px #95ccff;
+    border-radius: 8px;
+}
+.box26 .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: #000000;
+    font-weight: bold;
+}
+.box26 p {
+    margin: 0; 
+    padding: 0;
+}
+.b{
+  letter-spacing: -.4em;
+  font-size: 18px;
+  margin-bottom: 0;
+  list-style: none;
+  padding: 0;
+}
+.b li{
+  letter-spacing: normal;
+  display: inline-block;
+  width: calc(100%/6);
+}
+.b li a{
+  display: block;
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+  padding: 12px 0px;
+  text-transform: none;
+  color: #1a1a1a;
+  text-decoration: none;
+}
   </style>
+  <title>r06文化祭test</title>
 </head>
 <body>
-  <div class="background-container">
-    <img src="images/ポスター修正後.jpg" alt="多摩未来祭ロゴ" class="background-image">
-    <header class="header">
-      <div class="t-logo">
-        <h1><a><img class="logo" src="images/ポスター修正後.jpg" alt="多摩未来祭ロゴ"></a></h1>
-      </div>
-      <nav>
-        <ul class="b">
-          <li><a href="about\schedule.html">日程</a></li>
-          <li><a href="about\access.html">アクセス</a></li>
-          <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=07VbxZj7okm9Yto1xwcA4mRQxAdpmR1AjKxVxvrD3FJURUlKN0U3TExUWk83MVRaTlg4NFVFRUFSRS4u">入場用ＱＲコード</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div class="center-content">
-      <div class="c">
-        <h2 class="d">第n回多摩未来祭</h2>
-        <p class="p">welcome</p>
-        <a class="button" href="main.html">クリックしてください</a>
-      </div>
+  <div class="fixed-title">
+    <h1>多摩未来祭</h1>
+    <nav class="h-nav">
+    <ul class="b">
+    <li><a href="about\schedule.html">日程</a></li>
+    <li><a href="about\access.html">アクセス</a></li>
+    <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=07VbxZj7okm9Yto1xwcA4mRQxAdpmR1AjKxVxvrD3FJURUlKN0U3TExUWk83MVRaTlg4NFVFRUFSRS4u">入場用QR</a></li>
+  </div>
+      <div class="content">
+      <div class="box26">
+      <span class="box-title">NEWS</span>
+      <p>本校では今年度から受付にQRコードを使用いたします</p>
+      <p>ご来場のお客様は下記のリンクからQRコードの作成をお願いいたします。</p>
+      <p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=07VbxZj7okm9Yto1xwcA4mRQxAdpmR1AjKxVxvrD3FJURUlKN0U3TExUWk83MVRaTlg4NFVFRUFSRS4u">QRコード生成ページへ</a></p>
+    </div>
+    <div class="box26">
+      <span class="box-title">アクセス</span>
+      <p>住所　〒184-8581 東京都小金井市本町6-8-9</p>
+      <p>TEL　042-381-4164</p>
+      <p>FAX　042-381-4169</p>
+      <p>・JR中央線　武蔵小金井駅より徒歩10分</p>
+      <p><a href="about\access.html">>>詳細はこちら</p>
     </div>
   </div>
+ </div>
 </body>
 </html>
-
