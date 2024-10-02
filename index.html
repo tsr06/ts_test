@@ -4,24 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-    }
-    .background-container {
-      position: relative;
+    .logo {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .background-image {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain; /* 比率を保ちながら表示 */
+      z-index: -1;
     }
     .header {
       display: flex;
@@ -29,8 +18,13 @@
       margin: 0 auto;
       padding: 0 4%;
       justify-content: space-between;
-      position: relative;
-      z-index: 1;
+    }
+    .a {
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      height: 100vh;
+      animation: fadeInBackground 6s ease-in-out;
     }
     .b {
       display: flex;
@@ -53,8 +47,6 @@
     .c {
       text-align: center;
       justify-content: center;
-      position: relative;
-      z-index: 1;
     }
     .c p {
       font-size: 16px;
@@ -76,22 +68,48 @@
       padding: 18px 32px;
       text-decoration: none;
     }
+    #home {
+      background-image: url('images/ポスター修正後.jpg');
+      background-color: #f6f5f4;
+      min-height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+    #home .d {
+      text-transform: none;
+    }
+    .e {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+    .p{
+      background-color: rgba(255, 255, 255, 0.8);
+    }
     .center-content {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
-      position: relative;
-      z-index: 1;
     }
+    @keyframes fadeInBackground {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
   </style>
 </head>
 <body>
-  <div class="background-container">
-    <img src="images/ポスター修正後.jpg" alt="多摩未来祭ロゴ" class="background-image">
+  <div id="home" class="a">
     <header class="header">
-      <div class="t-logo">
+      <div t-logo>
         <h1><a><img class="logo" src="images/ポスター修正後.jpg" alt="多摩未来祭ロゴ"></a></h1>
       </div>
       <nav>
@@ -112,4 +130,3 @@
   </div>
 </body>
 </html>
-
