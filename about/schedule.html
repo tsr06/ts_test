@@ -45,11 +45,83 @@
           margin: auto;
           width: 100%;
       }
+    #menuButton {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #sideMenu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            padding-top: 60px;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        #sideMenu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #sideMenu ul li {
+            padding: 10px 20px;
+        }
+
+        #sideMenu ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #sideMenu ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .hidden {
+            transform: translateX(-100%);
+        }
+
+        .visible {
+            transform: translateX(0);
+        }
+
     </style>
    <title>多摩未来祭開催日程</title>
  </head>
  <body>
   <div class="fixed-title">
+   <button id="menuButton">メニュー</button>
+    <div id="sideMenu" class="hidden">
+        <ul>
+            <li><a href="main.html">多摩未来祭トップ</a></li>
+            <li><a href="access.html">アクセス</a></li>
+            <li><a href="schedule.html">日程</a></li>
+            <li><a href="">入場用QR</a></li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById('menuButton').addEventListener('click', function() {
+            var sideMenu = document.getElementById('sideMenu');
+            if (sideMenu.classList.contains('hidden')) {
+                sideMenu.classList.remove('hidden');
+                sideMenu.classList.add('visible');
+            } else {
+                sideMenu.classList.remove('visible');
+                sideMenu.classList.add('hidden');
+            }
+        });
+    </script>
+
    <h1>開催日程</h1>
   </div>
    <div class="content">
