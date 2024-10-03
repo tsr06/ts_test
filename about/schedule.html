@@ -116,12 +116,15 @@
     <script>
         document.getElementById('menuButton').addEventListener('click', function() {
             var sideMenu = document.getElementById('sideMenu');
+            console.log('Menu button clicked'); // デバッグ用ログ
             if (sideMenu.classList.contains('hidden')) {
                 sideMenu.classList.remove('hidden');
                 sideMenu.classList.add('visible');
+                console.log('Menu is now visible'); // デバッグ用ログ
             } else {
                 sideMenu.classList.remove('visible');
                 sideMenu.classList.add('hidden');
+                console.log('Menu is now hidden'); // デバッグ用ログ
             }
         });
     </script>
